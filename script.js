@@ -3,14 +3,11 @@
 const apiKey = 'c6c58fc18dfcd4b28afe5ea40e6681be';
  
 
-const searchURL ='https://api.spoonacular.com/recipes/complexSearch?apiKey=a5c669f607f64ac897d9beca01046cf0&includeIngredients=chicken&instructionsRequired=true';
+const searchURL ='https://api.spoonacular.com/recipes/'+searchTerm+'?apiKey=a5c669f607f64ac897d9beca01046cf0';
 
 
-function getRecipe(searchTerm) {
-    const params = {
-        q: searchTerm,
-        language: "en",
-    };
+function getRecipe(searchURL) {
+   
     fetch(searchURL)
 
         .then(response => {
