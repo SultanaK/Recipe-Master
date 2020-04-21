@@ -8,7 +8,7 @@ const url ='https://api.spoonacular.com/recipes/';
 //const searchURL = url+'?'+apiKey& searchTerm;
 
 
-function getRecipe(searchTerm,url,apiKey) {
+function getRecipe(searchTerm) {
    const searchURL = url+'?'+apiKey&searchTerm;
 
 
