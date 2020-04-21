@@ -3,11 +3,15 @@
 const apiKey = 'c6c58fc18dfcd4b28afe5ea40e6681be';
  
 
-const searchURL ='https://api.spoonacular.com/recipes/'+searchTerm+'?apiKey=a5c669f607f64ac897d9beca01046cf0';
+const url ='https://api.spoonacular.com/recipes/';
+
+//const searchURL = url+'?'+apiKey& searchTerm;
 
 
-function getRecipe(searchURL) {
-   
+function getRecipe(searchTerm) {
+   const searchURL = url+'?'+apiKey&searchTerm;
+
+
     fetch(searchURL)
 
         .then(response => {
