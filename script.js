@@ -3,8 +3,8 @@
 //const apiKey = 'c6c58fc18dfcd4b28afe5ea40e6681be';
  
 function getRecipe(searchTerm) {
-  
-    const url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?diet=vegetarian&query=${searchTerm}`;
+    const url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=${searchTerm}`;
+    //const url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?diet=vegetarian&query=${searchTerm}`;
     console.log(url);
      fetch(url, 
     {
@@ -40,8 +40,8 @@ function displayRecipes(responseJson){
         
         const entry= `<li>
                <h3> ${results[i].title}</h3>
-               <a href=" ${results[i].sourceUrl}"> 
-               <img src="${imageUrl+results[i].image}">
+               <a href=" ${results[i].sourceUrl}"target="_blank"> 
+               <img src="${imageUrl + results[i].image}" alt="${results[i].title}">
                </a>
         </li> `
         $('#results-list').append(entry);
