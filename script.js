@@ -31,8 +31,10 @@ function displayRecipes(responseJson){
     const results= responseJson.results;
     $('#results-list').empty();
    $('#results').removeClass('hidden'); 
-
-    for(let i =0; i<results.length; i++){
+    if(!(results.totalResults == 0))
+    {
+        for(let i =0; i<results.length; i++)
+        {
         let imageUrl = 'https://spoonacular.com/recipeImages/';
         console.log(imageUrl+results[i].image);
         console.log(results[i].title);
@@ -45,10 +47,10 @@ function displayRecipes(responseJson){
                </a>
         </li> `
         $('#results-list').append(entry);
-
-        
+     } 
+     
     }
-
+    else $('#results-list').html("Recipe not found"); 
 
 }
 

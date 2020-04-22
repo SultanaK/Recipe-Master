@@ -1,30 +1,22 @@
 * {
     box-sizing: border-box;
 } 
-/* h1{
-    text-align: center;
-} */
 html{
     background-image: url('./images/tres.jpg');
     background-size: cover;
     min-height: 100%;
 }
 .bg{
-    /*  background-image: url('./images/tres.jpg');
-    background-size: cover;  */
     margin: 0;
     justify-content: center;
     position: relative;
-
 }
 body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     border: 0;
-    padding: 0;
-    
+    padding: 0;  
 };
-
 button,
 input[type="text"] {
     padding: 5px;
@@ -50,24 +42,28 @@ ul {
     flex-flow: row wrap;
     list-style: none;
     width: 100%;
-     /*  padding: 0;
-    margin: 0 auto; */
-    
+    padding-left: 0;
+    border-right: 0; 
+    margin-right: 0; 
+    /* padding-right: 0; */
 }
 li {
     width: 250px;
     height:300px;
-    margin: 8px;
-    padding: 10px;
+    margin: 12px;
+   /*  padding: 12px; */
+    padding-left:20px ;
 }
 
 img {
     height: 200px;
-    width: 200px;
+    width: 220px;
 }
 
 .container {
-    width: 600px;
+    width: 85%;
+    margin-right: 0;
+    padding-right: 0;
     margin: 0 auto;
 }
 
@@ -80,7 +76,7 @@ img {
 }
 #js-search-term {
     height: 40px;
-    width: 85%;
+    width: 75%;
     border-radius: 7px;
     border: none;
     padding-left: 15px;
@@ -100,4 +96,31 @@ img {
     border-radius: 7px;
     
     }
+/* @media screen and (min-width: 320px) {
+    body {
+        text-align: left;
+    }
+    #js-search-term {
+        height: 30px;
+        width: 50%;
+    }
+    #btn-one {
+        margin: 0 auto;
+        margin-top: 20px;
+        height: 40px;
+        width: 80px;
+    }
+    #js-form {
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+    }
+} */
+
+/* @media screen and (min-width: 800px) {
+    body {
+         background-color: lavender; 
+    }
+} */
 
