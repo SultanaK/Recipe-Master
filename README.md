@@ -1,5 +1,4 @@
 # Recipe-Master
-HTML,CSS,jQuery,API
 # Capstone-Project-1
 
 # Project Proposal(Recipe Master)
@@ -29,3 +28,5 @@ GitHub,
 Visual Studio, 
 Git Bash and
 Google Fonts.
+#Live link :
+ https://sultanak.github.io/Recipe-Master/.
