@@ -8,22 +8,30 @@
     <title>Recipe finder</title>
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg">
     <div class="container">
-        <h1>Recipe Master</h1>
-
-        <form id="js-form">
-            <label for="search-term"><h2>Search</h2></label>
-            <input type="text" name="search-term" id="js-search-term" required>
-            <input type="submit" value="Submit" id="btn-one">
-        </form>
-        <p id="js-error-message" class="error-message"></p>
+        <section id="js-search">
+            <div class="main">
+                <h1 class="white-text">Want to cook something new? find your next recipe</h1>
+                <form id="js-form">
+                    <label for="search-term">
+                        <h2 class="white-text">Search</h2>
+                    </label>
+                    <input type="text" name="search-term" id="js-search-term" required><br>
+                    <a href="#test" class="a_btn" id="btn-one">SEARCH</a>
+                </form>
+                <p id="js-error-message" class="error-message"></p>
+            </div>
+        </section>
         <section id="results" class="hidden">
             <h2>Search results</h2>
-            <ul id="results-list">
-            </ul>
+            <div id="grid" class="results-list">
+                <!-- <ul id="results-list">
+                </ul> -->
+            </div>
         </section>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js"
