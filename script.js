@@ -1,28 +1,4 @@
 'use strict';
-
-function getRecipeVideo(searchTerm) {
-    const url = `https://yummly2.p.rapidapi.com/feeds/search?maxTotalTimeInSeconds=7200&q=${searchTerm}%20soup&start=0&maxResult=8`;
-    console.log(url);
-    fetch(url,
-        {
-            "method": "GET",
-            "headers": {
-                "x-rapidapi-host": "yummly2.p.rapidapi.com",
-                "x-rapidapi-key": "LgHxMTYKPpmshwhb6BYsVrPRtpvXp1pbPh5jsnDRyaXptvxh43"
-            }
-        })
-
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            }
-            throw new Error(response.statusText);
-        })
-        .then(responseJson => displayVideo(responseJson))
-        .catch(err => {
-            $('#js-error-message').text(`Something went wrong: ${err.message}`);
-        });
-    } 
 function getRecipe(searchTerm) {
      const url1 =
             `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=${searchTerm}`;
@@ -67,6 +43,29 @@ function displayRecipes(responseJson) {
     }
 
 }
+function getRecipeVideo(searchTerm) {
+    const url = `https://yummly2.p.rapidapi.com/feeds/search?&q=${searchTerm}&start=0&maxResult=8`;
+    console.log(url);
+    fetch(url,
+        {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "yummly2.p.rapidapi.com",
+                "x-rapidapi-key": "LgHxMTYKPpmshwhb6BYsVrPRtpvXp1pbPh5jsnDRyaXptvxh43"
+            }
+        })
+
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error(response.statusText);
+        })
+        .then(responseJson => displayVideo(responseJson))
+        .catch(err => {
+            $('#js-error-message').text(`Something went wrong: ${err.message}`);
+        });
+} 
 function displayVideo(responseJson){
     const feed = responseJson.feed[0];
     const title = feed.display.displayName;
@@ -81,16 +80,16 @@ function displayVideo(responseJson){
    console.log(steps);
 
    const name = `<h3>${title}<h3>`
-   const embed = `<video controls width = "400px"
+    const embed = `<video controls="controls" autoplay="autoplay" loop="loop" 
                     src = '${video}'
                      type = "video/mp4" >
                  </video>`
-    const recipeSteps = steps.map( step => `<p>${step}<p>` );
-     $("#video").append(name);
-   /*  $('#results-video').append(embed);  */
+    const recipeSteps = steps.map( step => `<p>${step}<p>`);
+     
+    $("#video").append(name);
        $('#video').append(embed); 
       $('#video').append(recipeSteps);   
-   /*  $('#preparation').append(recipeSteps);  */
+   
  
 }
 
@@ -99,8 +98,9 @@ function watchForm() {
     $('form').submit(event => {
         event.preventDefault();
         const searchTerm = $('#js-search-term').val();
+        getRecipe(searchTerm); 
         getRecipeVideo(searchTerm);
-        getRecipe(searchTerm);
+       
     });
 }
 

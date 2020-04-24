@@ -11,6 +11,9 @@ html{
     justify-content: center;
     position: relative;
 }
+p{
+    text-align: left;
+}
 body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -96,4 +99,8 @@ img {
     width: 70%;
     margin: 0 auto;
     background-color: aliceblue;
+}
+video{
+    width: 80%;
+    height: auto;
 }
