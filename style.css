@@ -92,3 +92,8 @@ img {
     margin-top: 10px;
     border-radius: 7px; 
     }
+#video {
+    width: 70%;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
