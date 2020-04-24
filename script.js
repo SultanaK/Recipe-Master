@@ -1,10 +1,7 @@
 'use strict';
 
-//const apiKey = 'c6c58fc18dfcd4b28afe5ea40e6681be';
-
 function getRecipe(searchTerm) {
     const url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=${searchTerm}`;
-    //const url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?diet=vegetarian&query=${searchTerm}`;
     console.log(url);
     fetch(url,
         {
@@ -25,13 +22,12 @@ function getRecipe(searchTerm) {
             $('#js-error-message').text(`Something went wrong: ${err.message}`);
         });
 }
-function scrollWin() {
-    window.scrollBy(0, screen.height);
-}
+
+  
 function displayRecipes(responseJson) {
     console.log(responseJson);
     const results = responseJson.results;
-    $('.results-list').empty();
+    $('#results-list').empty();
     $('#results').removeClass('hidden');
 
     for (let i = 0; i < results.length; i++) {
@@ -40,20 +36,20 @@ function displayRecipes(responseJson) {
         console.log(results[i].title);
         console.log(results[i].sourceUrl);
 
-        const entry = `
-        <div class='recipe'>
-               <h3>${results[i].title}</h3>
+        const entry = `<li>
+               <h3> ${results[i].title}</h3>
                <a href=" ${results[i].sourceUrl}"target="_blank"> 
                <img src="${imageUrl + results[i].image}" alt="${results[i].title}">
                </a>
-        <div> `
-        $('.results-list').append(entry);
+        </li> `
+        $('#results-list').append(entry);
+  
     }
-    scrollWin()
+
 }
 function watchForm() {
 
-    $('form').on('click', '.a_btn', event => {
+    $('form').submit(event => {
         event.preventDefault();
         const searchTerm = $('#js-search-term').val();
         getRecipe(searchTerm);
