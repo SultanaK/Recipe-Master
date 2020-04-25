@@ -10,7 +10,7 @@
     When the app first load, it will have top 5 recipe 
     ( Pasta, Barbeque chicken, Russian salad .... ) loaded with its image. 
     Each image contain the link of the recipe.
-    ![alt Home]('/images/homePage.png')
+    ![alt Home]('https://github.com/SultanaK/Recipe-Master/blob/master/images/homePage.png')
 # How to use Recipe Master:
     Enter the recipe you would like to make and the cuisine you would like (American, Mexican, Chinese, etc.). Then, click the "Find    Recipes" button.
     After clicking "Find Recipes" button, 10 recipe images will display.
