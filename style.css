@@ -107,10 +107,14 @@ img {
     color: aliceblue;
     margin-top: 20px;
     height: 40px;
-    width: 80px;
+    width: 128px;
     margin-top: 10px;
     border-radius: 7px; 
     }
+#btn-one:hover {
+    background-color: rgba(131, 25, 11, 0.733);
+    color:black;
+}
 #video {
     width: 70%;
     margin: 0 auto;
