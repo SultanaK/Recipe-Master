@@ -8,7 +8,7 @@
     you can simply find any recipe of your choice and try it.
 # Home page
     When the app first load, it will have  a introduction and search bar name Find Recipes. 
-    
+   ![alt home](https://github.com/SultanaK/Recipe-Master/blob/master/images/homePage.png)
     ![alt Home](master/images/homePage.png)
     <img src="images/homePage.png" height="100px" width="100px">
 
