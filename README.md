@@ -9,7 +9,7 @@
 # Home page
     When the app first load, it will have  a introduction and search bar name Find Recipes. 
     
-    ![alt Home](/images/homePage.png)
+    ![alt Home](master/images/homePage.png)
     <img src="images/homePage.png" height="100px" width="100px">
 
 # How to use Recipe Master:
