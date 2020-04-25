@@ -34,7 +34,7 @@ function displayRecipes(responseJson) {
         console.log(results[i].sourceUrl);
 
         const entry = `<li>
-               <h4> ${results[i].title}</h4>
+               <h6> ${results[i].title}</h6>
                <a href=" ${results[i].sourceUrl}"target="_blank"> 
                <img src="${imageUrl + results[i].image}" alt="${results[i].title}">
                </a>

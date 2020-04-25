@@ -51,7 +51,7 @@ h1 {
     
 }
 h2 {
-   font-family: 'Fira Sans Condensed', sans-serif;
+   font-family: 'Fira Sans Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    font-size: 20px;
    color: aliceblue;
    
@@ -81,7 +81,7 @@ h6{
     Geneva,
     Verdana,
     sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     color: black;
 }
 ul {
@@ -94,7 +94,8 @@ ul {
     padding-left: 2px;
     border-right: 0; 
     margin: 0 auto; 
-    padding-right: 0; 
+    padding-right: 0;
+    padding-bottom: 60px; 
 }
 li {
     width: 250px;
