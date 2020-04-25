@@ -25,7 +25,8 @@ function displayRecipes(responseJson) {
     const results = responseJson.results;
     $('#results-list').empty();
     $('#results').removeClass('hidden');
-
+    
+    
     for (let i = 0; i < results.length; i++) {
         let imageUrl = 'https://spoonacular.com/recipeImages/';
         console.log(imageUrl + results[i].image);
@@ -33,7 +34,7 @@ function displayRecipes(responseJson) {
         console.log(results[i].sourceUrl);
 
         const entry = `<li>
-               <h3> ${results[i].title}</h3>
+               <h4> ${results[i].title}</h4>
                <a href=" ${results[i].sourceUrl}"target="_blank"> 
                <img src="${imageUrl + results[i].image}" alt="${results[i].title}">
                </a>
@@ -62,8 +63,9 @@ function getRecipeVideo(searchTerm) {
             throw new Error(response.statusText);
         })
         .then(responseJson => displayVideo(responseJson))
+        .done
         .catch(err => {
-            $('#js-error-message').text(`Something went wrong: ${err.message}`);
+            $('#js-error-message').html(`Something went wrong: ${err.message}`);
         });
 } 
 function displayVideo(responseJson){
@@ -73,14 +75,14 @@ function displayVideo(responseJson){
     const steps = feed.content.preparationSteps;
 
    $('#video').empty();
-     $('#video').removeClass('hidden');
-
+    $('#video').removeClass('hidden');
+    console.log(feed);
    console.log(title);
    console.log(video);
    console.log(steps);
 
    const name = `<h3>${title}<h3>`
-    const embed = `<video controls="controls" autoplay="autoplay" loop="loop" 
+    const embed = `<video controls="controls" loop="loop" 
                     src = '${video}'
                      type = "video/mp4" >
                  </video>`

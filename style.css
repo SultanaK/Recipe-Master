@@ -2,7 +2,11 @@
     box-sizing: border-box;
 } 
 html{
-    background-image: url('./images/tres.jpg');
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(116, 14, 14, 0.73)),
+    
+url('./images/tres.jpg');
+    /* background-color: linear-gradient(-90deg, rgb(219, 212, 212), #888888); */
+    
     background-size: cover;
     min-height: 100%;
 }
@@ -11,7 +15,8 @@ html{
     justify-content: center;
     position: relative;
 }
-p{
+p { font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
     text-align: left;
 }
 body {
@@ -28,15 +33,26 @@ input[type="text"] {
 button:hover {
     cursor: pointer;
 }
-h1{
-    font-size: 50px;
+h1 {
+    font-family: 'Bangers', sans-serif;
+     font-size: 80px; 
     color: aliceblue;
-    font-weight: 200;
+     /* position: absolute; 
+    left: 600px;
+    top: 250px; */
 }
 h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 40px;
     color: aliceblue;
     font-weight: 200;
+}
+h3,h4{
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 20px;
+    /* position: absolute; 
+    left: 200px;
+    top: 400px; */
 }
 ul {
     background-color: aliceblue;
@@ -104,3 +120,8 @@ video{
     width: 80%;
     height: auto;
 }
+/* .position {
+    position: absolute; 
+    bottom: 40px;
+    width: 100%;
+} */
