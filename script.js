@@ -81,7 +81,7 @@ function displayVideo(responseJson){
    console.log(video);
    console.log(steps);
 
-   const name = `<h3>${title}<h3>`
+   const name = `<h6>${title}<h6>`
     const embed = `<video controls="controls" loop="loop" 
                     src = '${video}'
                      type = "video/mp4" >
