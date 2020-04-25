@@ -9,8 +9,6 @@
 # Home page
     When the app first load, it will have  a introduction and search bar name Find Recipes. 
    ![alt home](https://github.com/SultanaK/Recipe-Master/blob/master/images/homePage.png)
-    ![alt Home](master/images/homePage.png)
-    <img src="images/homePage.png" height="100px" width="100px">
 
 # How to use Recipe Master:
     Search bar will take to the search results where 
