@@ -8,7 +8,8 @@
     you can simply find any recipe of your choice and try it.
 # Home page
     When the app first load, it will have  a introduction and search bar name Find Recipes. 
-   ![alt home](https://github.com/SultanaK/Recipe-Master/blob/master/images/serchResults.png)
+   
+   ![alt serchResults](https://github.com/SultanaK/Recipe-Master/blob/master/images/homePage.png)
 
 # How to use Recipe Master:
     Search bar will take to the search results where 
@@ -17,7 +18,8 @@
     After clicking "Find Recipes" button, related recipe images will display.
     Next, click on an image to view step-by-step preparation instructions.
     It will also suggest related video of the recipe with step-by-step preparation instructions at the bottom of the page.
-       ![alt home](https://github.com/SultanaK/Recipe-Master/blob/master/images/homePage.png)
+  
+  ![alt serchResults](https://github.com/SultanaK/Recipe-Master/blob/master/images/searchResults.png)
     
 # Technologies Used in the Creation of this Project
 
