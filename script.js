@@ -60,7 +60,7 @@ function getRecipeVideo(searchTerm) {
         .then(responseJson => displayVideo(responseJson))
         .done
         .catch(err => {
-            $('#js-error-message').html(`Something went wrong: ${err.message}`);
+            $('#js-error-message').text(`Something went wrong: ${err.message}`);
         });
 } 
 function displayVideo(responseJson){
