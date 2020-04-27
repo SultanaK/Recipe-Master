@@ -20,6 +20,8 @@
     It will also suggest related video of the recipe with step-by-step preparation instructions at the bottom of the page.
   
   ![alt serchResults](https://github.com/SultanaK/Recipe-Master/blob/master/images/searchResults.png)
+  
+  ![alt serchResults](https://github.com/SultanaK/Recipe-Master/blob/master/images/videoSteps.png)
     
 # Technologies Used in the Creation of this Project
 
