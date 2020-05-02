@@ -1,7 +1,5 @@
 # Recipe-Master
-# Capstone-Project-1
-
-# Project Proposal(Recipe Master)
+  Recipe-Master is client-side apps that interact with third-party APIs.
 
 # What does Recipe Master do for you?
     Don't know what to make for dinner? With the Recipe Master web app 
