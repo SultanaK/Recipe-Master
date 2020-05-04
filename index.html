@@ -6,32 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Recipe Master</title>
-    <link href="https://fonts.googleapis.com/css?family=Bangers|Fira+Sans+Condensed|Lobster|Shadows+Into+Light&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css?family=Bangers|Fira+Sans+Condensed|Lobster|Shadows+Into+Light&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Recipe Master</h1>
-        <h3 style="color: aliceblue;"> Don't know what to make for dinner? With the Recipe Master web app you can simply find any recipe of your choice and try
-        it.</h3>
+        <div class="main">
+            <h1>Recipe Master</h1>
+        </div>
+        <h3 style="color: aliceblue;"> Don't know what to make for dinner? With the Recipe Master web app you can simply
+            find any recipe of your choice and try
+            it.</h3>
         <form id="js-form">
-            <label for="search-term"><h2 style="color: aliceblue;">Let's Find Some Recipes</h2></label>
+            <label for="search-term">
+                <h2 style="color: aliceblue;">Let's Find Some Recipes</h2>
+            </label>
             <input type="text" name="search-term" id="js-search-term" required>
             <br>
             <input type="submit" value="Find Recipes" id="btn-one">
         </form>
         <p id="js-error-message" class="error-message"></p>
-        
-    
+
+
         </section>
         <section id="results" class="hidden">
             <h2>Search results</h2>
             <ul id="results-list">
             </ul>
         </section>
-    <section id="video" class="hidden">
+        <section id="video" class="hidden">
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>

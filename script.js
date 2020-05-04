@@ -29,10 +29,6 @@ function displayRecipes(responseJson) {
     
     for (let i = 0; i < results.length; i++) {
         let imageUrl = 'https://spoonacular.com/recipeImages/';
-        console.log(imageUrl + results[i].image);
-        console.log(results[i].title);
-        console.log(results[i].sourceUrl);
-
         const entry = `<li>
                <h4> ${results[i].title}</h4>
                <a href=" ${results[i].sourceUrl}"target="_blank"> 
@@ -63,9 +59,8 @@ function getRecipeVideo(searchTerm) {
             throw new Error(response.statusText);
         })
         .then(responseJson => displayVideo(responseJson))
-        .done
         .catch(err => {
-            $('#js-error-message').html(`Something went wrong: ${err.message}`);
+            $('#js-error-message').html(`Something went wrong: No video found try something else`);
         });
 } 
 function displayVideo(responseJson){
@@ -97,8 +92,10 @@ function displayVideo(responseJson){
 
 
 function watchForm() {
+    $('#js-error-message').empty()
     $('form').submit(event => {
         event.preventDefault();
+        $('#js-error-message').empty()
         const searchTerm = $('#js-search-term').val();
         getRecipe(searchTerm); 
         getRecipeVideo(searchTerm);
