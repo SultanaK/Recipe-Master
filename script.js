@@ -21,7 +21,6 @@ function getRecipe(searchTerm) {
         });
 }
 function displayRecipes(responseJson) {
-    console.log(responseJson);
     const results = responseJson.results;
     $('#results-list').empty();
     $('#results').removeClass('hidden');
@@ -30,7 +29,7 @@ function displayRecipes(responseJson) {
     for (let i = 0; i < results.length; i++) {
         let imageUrl = 'https://spoonacular.com/recipeImages/';
         const entry = `<li>
-               <h4> ${results[i].title}</h4>
+               <h6> ${results[i].title}</h6>
                <a href=" ${results[i].sourceUrl}"target="_blank"> 
                <img src="${imageUrl + results[i].image}" alt="${results[i].title}">
                </a>
@@ -42,7 +41,6 @@ function displayRecipes(responseJson) {
 }
 function getRecipeVideo(searchTerm) {
     const url = `https://yummly2.p.rapidapi.com/feeds/search?&q=${searchTerm}&start=0&maxResult=8`;
-    console.log(url);
     fetch(url,
         {
             "method": "GET",
@@ -71,12 +69,9 @@ function displayVideo(responseJson){
 
    $('#video').empty();
     $('#video').removeClass('hidden');
-    console.log(feed);
-   console.log(title);
-   console.log(video);
-   console.log(steps);
+    
 
-   const name = `<h3>${title}<h3>`
+   const name = `<h6>${title}<h6>`
     const embed = `<video controls="controls" loop="loop" 
                     src = '${video}'
                      type = "video/mp4" >
